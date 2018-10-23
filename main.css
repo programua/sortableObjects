@@ -1,0 +1,40 @@
+body {
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    float: left;
+}
+
+ul#listWidthHandle-left {
+    position: static;
+}
+
+ul#listWidthHandle-right {
+    position: relative;
+}
+
+li.a {
+    margin-left: 5px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid gray;
+    font-size: 12px;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+li.b {
+    margin-left: 5px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid grey;
+    font-size: 12px;
+    text-align: center;
+    background-color: pink;
+}
+
+li:hover{
+    cursor: move;
+}

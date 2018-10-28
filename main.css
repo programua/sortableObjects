@@ -12,7 +12,7 @@ ul#listWidthHandle-left {
 }
 
 ul#listWidthHandle-right {
-    position: relative;
+    position: static;
 }
 
 li.a {
@@ -23,6 +23,7 @@ li.a {
     font-size: 12px;
     text-align: center;
     background-color: aquamarine;
+    border-radius: 0.2em;
 }
 
 li.b {
@@ -33,8 +34,19 @@ li.b {
     font-size: 12px;
     text-align: center;
     background-color: pink;
+    border-radius: 0.2em;
 }
 
-li:hover{
+li:hover {
     cursor: move;
+}
+
+.add-button {
+    border-radius: 0.4em;
+    box-shadow: none;
+    border: 1px solid gray;
+}
+
+.add-button:hover {
+    background-color: rgba(128, 128, 128, 0.171);
 }

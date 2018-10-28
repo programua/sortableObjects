@@ -6,36 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
     <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <ul id="listWidthHandle-left" class="num-list">
-        <li class="a">1</li>
-        <li class="a">2</li>
-        <li class="a">3</li>
-        <li class="a">4</li>
-        <li class="a">5</li>
-        <li class="a">6</li>
-        <li class="a">7</li>
-        <li class="a">8</li>
-        <li class="a">9</li>
-    </ul>
-    <ul id="listWidthHandle-right" class="num-list">
-        <li class="b">1</li>
-        <li class="b">2</li>
-        <li class="b">3</li>
-        <li class="b">4</li>
-        <li class="b">5</li>
-        <li class="b">6</li>
-        <li class="b">7</li>
-        <li class="b">8</li>
-        <li class="b">9</li>
-    </ul>
+    <div class="main-div">
+        <div>
+            <input type="button" v-on:click="click('left')" value="ADD" class="add-button" id="add-button-left">
+            <ul id="listWidthHandle-left" class="num-list">
+                <li class="a" v-for="item in leftItems"> {{ item.message }} </li>
+            </ul>
+        </div>
+        <div>
+            <input type="button" v-on:click="click('right')" value="ADD" class="add-button" id="add-button-right">
+            <ul id="listWidthHandle-right" class="num-list">
+                <li class="b" v-for="item in rightItems"> {{ item.message }} </li>
+            </ul>
+        </div>
+    </div>
     <script>
         $(function(){
             $("#listWidthHandle-left,#listWidthHandle-right").sortable({
@@ -43,5 +36,6 @@
             });
         });
     </script>
+    <script src="index.js"></script>
 </body>
 </html>
